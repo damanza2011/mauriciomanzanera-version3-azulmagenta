@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="blueMagentaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="50%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#D946EF" />
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA" />
+      <stop offset="100%" stop-color="#E879F9" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Connecting Lines -->
+  <!-- Center: 200, 200 -->
+  <!-- Top Node: 160, 60 -->
+  <line x1="200" y1="200" x2="160" y2="60" stroke="url(#blueMagentaGrad)" stroke-width="6" stroke-linecap="round" opacity="0.85" />
+  <!-- Top-Right Node: 265, 95 -->
+  <line x1="200" y1="200" x2="265" y2="95" stroke="url(#blueMagentaGrad)" stroke-width="5" stroke-linecap="round" opacity="0.8" />
+  <!-- Right Node: 335, 200 -->
+  <line x1="200" y1="200" x2="335" y2="200" stroke="url(#blueMagentaGrad)" stroke-width="7" stroke-linecap="round" opacity="0.9" />
+  <!-- Bottom-Right Node: 280, 310 -->
+  <line x1="200" y1="200" x2="280" y2="310" stroke="url(#blueMagentaGrad)" stroke-width="6" stroke-linecap="round" opacity="0.85" />
+  <!-- Bottom-Left Node: 120, 300 -->
+  <line x1="200" y1="200" x2="120" y2="300" stroke="url(#blueMagentaGrad)" stroke-width="6" stroke-linecap="round" opacity="0.85" />
+  <!-- Left Node: 80, 200 -->
+  <line x1="200" y1="200" x2="80" y2="200" stroke="url(#blueMagentaGrad)" stroke-width="5" stroke-linecap="round" opacity="0.8" />
+
+  <!-- Outer Satellites -->
+  <!-- Left satellite: 80, 200, r=16 -->
+  <circle cx="80" cy="200" r="16" fill="url(#nodeGrad)" />
+  <!-- Top satellite: 160, 60, r=20 -->
+  <circle cx="160" cy="60" r="20" fill="url(#nodeGrad)" />
+  <!-- Top-Right satellite: 265, 95, r=14 -->
+  <circle cx="265" cy="95" r="14" fill="url(#nodeGrad)" />
+  <!-- Right satellite: 335, 200, r=28 -->
+  <circle cx="335" cy="200" r="28" fill="url(#nodeGrad)" />
+  <!-- Bottom-Right satellite: 280, 310, r=22 -->
+  <circle cx="280" cy="310" r="22" fill="url(#nodeGrad)" />
+  <!-- Bottom-Left satellite: 120, 300, r=24 -->
+  <circle cx="120" cy="300" r="24" fill="url(#nodeGrad)" />
+
+  <!-- Center Core Node: 200, 200, r=42 -->
+  <circle cx="200" cy="200" r="46" fill="url(#blueMagentaGrad)" filter="url(#glow)" />
+  <circle cx="200" cy="200" r="40" fill="#0A1128" stroke="url(#blueMagentaGrad)" stroke-width="4" />
+  <circle cx="200" cy="200" r="22" fill="url(#nodeGrad)" />
+</svg>
